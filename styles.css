@@ -1,0 +1,496 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+:root {
+  --rosa-pastel: #f6b7cb;
+  --lila-pastel: #e7bdda;
+  --celeste-pastel: #bae2ee;
+  --amarillo-pastel: #f2f299;
+  --gris-oscuro: #1e1f1e;
+  --blanco: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--blanco);
+  color: var(--gris-oscuro);
+  line-height: 1.5;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.product-card {
+  background-color: var(--lila-pastel);
+  padding: 1rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Añade transición */
+}
+
+.product-card:hover {
+  transform: scale(1.05); /* Crece un 5% */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Sombra más marcada */
+  cursor: pointer;
+}
+
+
+.header {
+  background-color: var(--lila-pastel);
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;  
+  box-shadow: none !important;
+
+}
+
+.logo {
+  height: 80px;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+.navbar a {
+  text-decoration: none;
+  background-color: var(--amarillo-pastel);
+  padding: 0.5rem 1rem;
+  border-radius: 25px;
+  color: var(--gris-oscuro);
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.navbar a:hover {
+  background-color: var(--rosa-pastel);
+}
+
+/* Productos */
+.products h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.product {
+  background-color: var(--lila-pastel);
+  border-radius: 15px;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.product img {
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+  height: 200px;
+}
+
+.product h3 {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+}
+
+.product p {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.add-to-cart {
+  background-color: var(--rosa-pastel);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.add-to-cart:hover {
+  background-color: var(--amarillo-pastel);
+}
+
+/* Carrito */
+.cart {
+  margin-top: 4rem;
+  background-color: var(--celeste-pastel);
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.cart h2 {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.cart table {
+  width: 100%;
+  margin-bottom: 1rem;
+  border-collapse: collapse;
+}
+
+.cart th, .cart td {
+  padding: 0.75rem;
+  text-align: left;
+  border-bottom: 1px solid #ccc;
+}
+
+.total {
+  font-weight: bold;
+  text-align: right;
+  margin-bottom: 1rem;
+}
+
+#clear-cart,
+#pay-btn {
+  background-color: var(--rosa-pastel);
+  color: var(--gris-oscuro);
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  margin-top: 1rem;
+}
+
+#clear-cart:hover,
+#pay-btn:hover {
+  background-color: var(--amarillo-pastel);
+}
+
+.payment-form {
+  margin-top: 2rem;
+  display: grid;
+  gap: 1rem;
+}
+
+.payment-form input,
+.payment-form select {
+  padding: 0.5rem;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+/* Footer */
+footer {
+  background-color: var(--lila-pastel);
+  padding: 2rem;
+  text-align: center;
+  margin-top: 4rem;
+}
+
+footer h2 {
+  margin-bottom: 1rem;
+}
+
+.subscribe-form {
+  display: grid;
+  gap: 1rem;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.subscribe-form input,
+.subscribe-form select {
+  padding: 0.5rem;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+
+.subscribe-form button {
+  background-color: var(--rosa-pastel);
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 25px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.subscribe-form button:hover {
+  background-color: var(--amarillo-pastel);
+}
+
+.dob-selectors {
+  display: flex;
+  gap: 0.5rem;
+}
+
+/* === Estilo para página de postres y batidos de DeliVibe === */
+
+/* Paleta pastel */
+:root {
+  --rosa-pastel: #f6b7cb;
+  --lila-pastel: #e7bdda;
+  --celeste-pastel: #bae2ee;
+  --amarillo-pastel: #f2f299;
+  --gris-oscuro: #1e1f1e;
+  --blanco: #ffffff;
+}
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--blanco);
+  color: var(--gris-oscuro);
+  line-height: 1.5;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* Header */
+header {
+  background-color: var(--lila-pastel);
+  padding: 1rem 2rem;
+    box-shadow: none !important;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 1rem;
+  justify-content: center;
+}
+
+nav a {
+  text-decoration: none;
+  background-color: var(--amarillo-pastel);
+  padding: 0.5rem 1rem;
+  border-radius: 25px;
+  color: var(--gris-oscuro);
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+  background-color: var(--rosa-pastel);
+}
+
+/* Contenido principal */
+main {
+  padding: 2rem;
+  text-align: center;
+}
+
+main h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+main p {
+  max-width: 800px;
+  margin: 0 auto 2rem auto;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+/* Productos */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.product-card {
+  background-color: var(--lila-pastel);
+  padding: 1rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.product-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.product-card h3 {
+  margin-top: 1rem;
+  font-size: 1.3rem;
+}
+
+.product-card p {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+}
+
+/* Footer */
+footer {
+  background-color: var(--lila-pastel);
+  text-align: center;
+  padding: 1rem;
+  margin-top: 4rem;
+  font-weight: bold;
+  color: var(--gris-oscuro);
+}
+
+
+/* === Estilo unificado pastel para contacto === */
+
+/* Paleta pastel */
+:root {
+  --rosa-pastel: #f6b7cb;
+  --lila-pastel: #e7bdda;
+  --celeste-pastel: #bae2ee;
+  --amarillo-pastel: #f2f299;
+  --gris-oscuro: #1e1f1e;
+  --blanco: #ffffff;
+}
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--blanco);
+  color: var(--gris-oscuro);
+  line-height: 1.5;
+}
+
+/* Header */
+header {
+  background-color: var(--lila-pastel);
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 1rem;
+  justify-content: center;
+}
+
+nav a {
+  text-decoration: none;
+  background-color: var(--amarillo-pastel);
+  padding: 0.5rem 1rem;
+  border-radius: 25px;
+  color: var(--gris-oscuro);
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+  background-color: var(--rosa-pastel);
+}
+
+main {
+  padding: 2rem;
+  text-align: center;
+}
+
+main h1 {
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+}
+
+.contact-section {
+  display: grid;
+  gap: 2rem;
+  max-width: 700px;
+  margin: 0 auto;
+  align-items: center;
+  justify-items: center;
+}
+
+.contact-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.contact-form {
+  background-color: var(--lila-pastel);
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  width: 100%;
+}
+
+.contact-form h2 {
+  margin-bottom: 1rem;
+}
+
+.contact-form label {
+  display: block;
+  margin-top: 1rem;
+  text-align: left;
+}
+
+.contact-form input {
+  width: 100%;
+  padding: 0.5rem;
+  margin-top: 0.3rem;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.contact-form button {
+  background-color: var(--rosa-pastel);
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 25px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 1.5rem;
+}
+
+.contact-form button:hover {
+  background-color: var(--amarillo-pastel);
+}
+
+/* Footer */
+footer {
+  background-color: var(--lila-pastel);
+  text-align: center;
+  padding: 1rem;
+  margin-top: 4rem;
+  font-weight: bold;
+  color: var(--gris-oscuro);
+}
